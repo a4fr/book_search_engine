@@ -1,5 +1,10 @@
-# book_search_engine
-python class for using http://it-ebooks.info API to download free best relevant books.
+Python class for work with http://it-ebooks.info API to download best relevant books free.
+
+Classes
+-------
+- ``search_engine``
+
+    Main class for work with API.
 
 Properties
 ----------
@@ -40,6 +45,14 @@ Methodes
     **@return**        list
 
     **Notice:** after online search, data store in JSON format in  like ``books-php-[31from187].json``, so you can use again this file for offline search.
+
+
+
+
+============
+Sample codes
+============
+aa
 
 
 
