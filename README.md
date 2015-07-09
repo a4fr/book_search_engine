@@ -1,4 +1,5 @@
-Python class for work with http://it-ebooks.info API to download best relevant books free.
+Python3 class for work with http://it-ebooks.info API to download best relevant books free.
+
 
 Classes
 -------
@@ -14,7 +15,7 @@ Properties
 
 - ``limit_in_pages``
 
-    Max number of deeping in search result. Every page has maximum 10 books. so if you wnat to see maximum 25 books suggestion, set ``limit_in_pages``  3.
+    Max number of deeping in search result. Every page has maximum 10 books. so if you wnat to see maximum 30 books suggestion, set ``limit_in_pages``  3.
     
     ``limit_in_pages = 0`` means there is no limit in find books and ``find`` methode proccess first to end results page.
 
@@ -62,9 +63,9 @@ Sample codes
 
     >>> felfeli.limit_in_pages = 1
 
-    >>> result = felfeli.find('p') #reves-sort
+    >>> result = felfeli.find('p')
 
-    >>> result = felfeli.find('-p') #reves-sort
+    >>> result = felfeli.find('-p') #reverse-sort
 
     >>> type(result)
 
