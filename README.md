@@ -36,7 +36,7 @@ Methodes
 
         * [R]elevant, [Y]ear, [A]uthor, [B]Publisher, [P]age
 
-        * it can be lower case or UPPER
+        * It can be lower case or UPPER
 
         * -R -Y -A -P -B "reverse-sort"
 
@@ -52,9 +52,80 @@ Methodes
 ============
 Sample codes
 ============
-aa
+    >>> from search_engine import search_engine
 
+    >>> felfeli = search_engine()
 
+    >>> felfeli.set_tag("php")
+
+    >>> felfeli.set_tag("mysql")
+
+    >>> felfeli.limit_in_pages = 1
+
+    >>> result = felfeli.find('p') #reves-sort
+
+    >>> result = felfeli.find('-p') #reves-sort
+
+    >>> type(result)
+
+    <class 'list'>
+
+    >>> result = felfeli.find('b', "books-php-mysql-[10from138].json")
+
+    >>> type(result)
+
+    <class 'list'>
+
+    >>> import pprint
+    
+    >>> pp = pprint.PrettyPrinter(indent=4)
+    
+    >>> pp.pprint(result[0])
+    
+    {   'Author': 'Armando Padilla , Tim Hawkins',
+        'Description': 'This book contains tips, tricks, and techniques to make '
+                       'new and existing PHP applications much faster and less '
+                       'resource-hungry.\n'
+                       '\n'
+                       'Pro PHP Application Performance will help you understand '
+                       'all the technologies and components which play a role in '
+                       'how well your applications run. When seconds can mean '
+                       'the difference between retaining a user and losing a '
+                       "user, it's important for all of us to have optimization "
+                       'as part of our project roadmap. But what components '
+                       'within your application should you analyze? How should '
+                       'you optimize? And how can you measure how well your '
+                       'application is performing? These are some of the '
+                       'questions that are answered in this book.\n'
+                       '\n'
+                       'Along the way you will also learn the &quot;why&quot; of '
+                       'optimizing. You’ll discover why you should optimize a '
+                       'specific component, why selecting one function over '
+                       'another is beneficial, and how to find and use the '
+                       'optimization tools available to the open source '
+                       'community. You’ll also learn how to deploy caching '
+                       'software as well as web server software.',
+
+        'Download': 'http://filepi.com/i/sTM94d9',
+
+        'ID': 427318464,
+
+        'ISBN': 9781430228981,
+
+        'Image': 'http://s.it-ebooks-api.info/6/pro_php_application_performance.jpg',
+
+        'Page': 264,
+
+        'Publisher': 'Apress',
+
+        'SubTitle': 'Tuning PHP Web Projects for Maximum Performance',
+
+        'Title': 'Pro PHP Application Performance',
+
+        'Year': 2010,
+
+        'isbn': '9781430228981'}
+    
 
 
 
