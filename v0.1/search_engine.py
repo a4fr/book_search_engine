@@ -4,7 +4,7 @@ from operator import itemgetter #uses in sorting data
 
 """
     find best book that you need and return them
-    @author    Ali Najafi
+    @author    Ali Najafi (mail.ali.najafi@gmail.com)
     @source    http://it-ebooks-api.info/
 """
 from oneconf.utils import save_json_file_update
