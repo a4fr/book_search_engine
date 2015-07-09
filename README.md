@@ -20,8 +20,12 @@ Methodes
 - ``find(sort_with="R", offline_json="")``
     Find best books and sort them for you. This methode can search online or use older JSON file (older online search).
 
-    @sort_with    [R]elevant, [Y]ear, [A]uthor, [B]Publisher [P]age
+    @sort_with
+
+        * [R]elevant, [Y]ear, [A]uthor, [B]Publisher, [P]age
+
         * it can be lower case or UPPER
+
         * -R -Y -A -P -B "reverse-sort"
 
     @offline_json    PATH of json file
@@ -29,9 +33,3 @@ Methodes
     @return        list
 
     **Notice:** after online search, data store in JSON format in  like ``books-php-[31from187].json``, so you can use again this file for offline search.
-
-
-
-
-
- 
