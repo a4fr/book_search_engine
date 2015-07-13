@@ -26,7 +26,7 @@ Properties
 
 - `show_progressbar`
 
-    This is for enable show progressbar in search online. The default value is `False`.
+    Show progressbar in search online when you run app in shell. The default value is `False`.
 
 Methodes
 --------
