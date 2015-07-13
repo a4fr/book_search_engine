@@ -1,6 +1,8 @@
 import json
 import urllib.request
 from operator import itemgetter #uses in sorting data
+from progress.bar import Bar
+
 
 """
     find best book that you need and return them
@@ -15,6 +17,7 @@ class search_engine:
         self.limit_in_pages = 0 # value <= 0 means there is no limit
         self.total_result = 0
         self.all_pages = 0
+        self.show_progressbar = False
     
     
     """
@@ -61,6 +64,7 @@ class search_engine:
             finded_books.extend(request["Books"])
             CURRENT_PAGE += 1
         #extract other detail of books
+        if self.show_progressbar: progressbar = Bar('Searching ', max=len(finded_books))
         for book_index in range(len(finded_books)):
             url = "http://it-ebooks-api.info/v1/book/"+str(finded_books[book_index]["ID"])
             other_details = self.request(url)
@@ -71,6 +75,8 @@ class search_engine:
                         finded_books[book_index][detail] = int(other_details[detail])
                     else:
                         finded_books[book_index][detail] = other_details[detail]
+            if self.show_progressbar: progressbar.next()
+        if self.show_progressbar: progressbar.finish()
         #save data as json file
         name = 'books-%s-[%sfrom%s].json' % (tags.replace(" ", "-"), len(finded_books), self.total_result)
         save_json_file_update(name, finded_books)

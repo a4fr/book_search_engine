@@ -4,10 +4,12 @@ import pprint
 from search_engine import search_engine
 
 felfeli = search_engine()
-felfeli.set_tag("python")
-felfeli.limit_in_pages = 1
-#result = felfeli.find('-p')
-result = felfeli.find('b', "books-php-[10from138].json")
+felfeli.set_tag("html")
+felfeli.set_tag("css")
+felfeli.limit_in_pages = 2
+felfeli.show_progressbar = True
+result = felfeli.find('-y')
+#result = felfeli.find('-b', "books-html-css-[180from176].json")
 
 data = []
 for book in result:
