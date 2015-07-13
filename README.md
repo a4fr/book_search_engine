@@ -23,6 +23,11 @@ Properties
 
     show you how many books in http://it-ebooks.info with this ``tags``.
 
+
+- `show_progressbar`
+
+    This is for enable show progressbar in search online. The default value is `False`.
+
 Methodes
 --------
 - ``set_tag(tag_name)``
@@ -62,6 +67,8 @@ Sample codes
     >>> felfeli.set_tag("mysql")
 
     >>> felfeli.limit_in_pages = 1
+
+    >>> felfeli.show_progressbar = True
 
     >>> result = felfeli.find('p')
 
