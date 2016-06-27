@@ -50,7 +50,7 @@ Methodes
 
     **@return**        list
 
-    **Notice:** after online search, data store in JSON format in  like ``books-php-[31from187].json``, so you can use again this file for offline search.
+    **Notice:** after online search, data store as a file in JSON format, like ``books-php-[31from187].json``. So you can use again this file for offline search.
 
 
 
